@@ -1,0 +1,20 @@
+{
+  "name": "rollingup.ts",
+  "version": "1.0.0",
+  "author": "Rosario De Chiara",
+  "license": "Apache License Version 2.0",
+  "description": "",
+  "scripts": {
+    "test": "npm run build && node appTS.js && node appJS.js",
+    "build": "rollup -c && tsc"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.38",
+    "rollup": "^2.71.1",
+    "rollup-plugin-dts": "^4.2.1",
+    "rollup-plugin-esbuild": "^4.9.1"
+  },
+  "dependencies": {
+    "typescript": "^4.6.4"
+  }
+}
