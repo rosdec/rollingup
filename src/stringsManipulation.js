@@ -8,3 +8,6 @@ export function titleCase(str) {
     }).join(' ');
 }
 
+export function upperCase(str) {
+    return str.toUpperCase()
+}
