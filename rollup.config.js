@@ -7,7 +7,7 @@ export default [
     plugins: [esbuild()],
     output: [
       {
-        file: `dist/gameLibrary.js`,
+        file: `dist/bundle.js`,
         format: 'cjs',
         sourcemap: true,
         exports: 'default',
@@ -18,7 +18,7 @@ export default [
     input: `src/gameLibrary.js`,
     plugins: [dts()],
     output: {
-      file: `dist/gameLibrary.d.ts`,
+      file: `dist/bundle.d.ts`,
       format: 'es',
     },
   }

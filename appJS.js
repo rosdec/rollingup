@@ -1,4 +1,4 @@
-const generateChallenge = require("./dist/gameLibrary")
+const generateChallenge = require("./dist/bundle")
 
 const number = Math.floor(Math.random() * 1000);
 

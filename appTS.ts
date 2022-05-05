@@ -1,4 +1,4 @@
-import generateChallenge from "./dist/gameLibrary";
+import generateChallenge from "./dist/bundle";
 
 const number:Number = Math.floor(Math.random() * 1000);
 
