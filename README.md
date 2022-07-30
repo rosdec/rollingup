@@ -1,5 +1,7 @@
 # imagekit-hook-wrapper
 
+[![npm](https://img.shields.io/npm/v/imagekit-react-hook?color=orange)](https://www.npmjs.com/package/imagekit-react-hook)
+
 This is a simple hook wrapper around the ImageKit.io javascript library. It allows for easy usage of client-side uploads,
 as well as generating signed URLs for private images. This is a very direct, non-opinionated wrapper, so the original
 ImageKit.io documentation should be referred to for method usage.
