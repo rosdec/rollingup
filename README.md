@@ -1,4 +1,4 @@
-# imagekit-hook-wrapper
+# imagekit-react-hook
 
 [![npm](https://img.shields.io/npm/v/imagekit-react-hook?color=orange)](https://www.npmjs.com/package/imagekit-react-hook)
 
