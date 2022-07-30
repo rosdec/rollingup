@@ -69,4 +69,4 @@ The following methods and properties are exposed via the `useImageKit` hook:
 | urlEndpoint            | string | The ImageKit.io endpoint that was passed into the ImageKitProvider         |
 | publicKey              | string | The ImageKit.io public key that was passed into the ImageKitProvider       |
 | authenticationEndpoint | string | The authentication endpoint that was passed into the ImageKitProvider      |
-| imageKitClient         | object | Generate signed ImageKit.io URLs                                           |
+| imageKitClient         | object | Raw ImageKit SDK client                                                    |
