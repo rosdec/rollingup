@@ -1,20 +1,50 @@
 {
-  "name": "rollingup.ts",
+  "name": "imagekit-react-hook",
   "version": "1.0.0",
-  "author": "Rosario De Chiara",
-  "license": "Apache License Version 2.0",
-  "description": "",
+  "keywords": [
+    "imagekit",
+    "react",
+    "hook",
+    "cdn"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "Bruce Harrison",
+  "license": "MIT",
+  "description": "Hook wrapper for ImageKit.io client-side SDK",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
-    "test": "npm run build && node appTS.js && node appJS.js",
-    "build": "rollup -c && tsc"
+    "lint": "cross-env eslint . --ext .ts --ext .tsx",
+    "prettier": "cross-env prettier --check -w \"src/**/**.(ts|tsx|js)\"",
+    "build": "cross-env rollup -c"
   },
   "devDependencies": {
-    "esbuild": "^0.14.38",
-    "rollup": "^2.71.1",
-    "rollup-plugin-dts": "^4.2.1",
-    "rollup-plugin-esbuild": "^4.9.1"
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@swc/core": "^1.2.220",
+    "@swc/helpers": "^0.4.3",
+    "@types/react": "^16.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.7.1",
+    "rollup": "^2.77.2",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-ts": "^3.0.2",
+    "typescript": "4.6.4"
+  },
+  "peerDependencies": {
+    "react": "^16.14.0"
   },
   "dependencies": {
-    "typescript": "^4.6.4"
+    "imagekit-javascript": "^1.5.2"
   }
 }

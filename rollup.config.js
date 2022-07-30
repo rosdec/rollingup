@@ -1,25 +1,34 @@
-import dts from 'rollup-plugin-dts'
-import esbuild from 'rollup-plugin-esbuild'
+import { defineConfig } from 'rollup';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import cleaner from 'rollup-plugin-cleaner';
+import commonjs from '@rollup/plugin-commonjs';
+import ts from 'rollup-plugin-ts';
 
-export default [
-  {
-    input: `src/gameLibrary.js`,
-    plugins: [esbuild()],
-    output: [
-      {
-        file: `dist/bundle.js`,
-        format: 'cjs',
-        sourcemap: true,
-        exports: 'default',
-      },
-    ]
+const options = defineConfig({
+  input: 'src/index.ts',
+  output: {
+    sourcemap: 'hidden',
+    dir: 'dist',
+    format: 'esm',
   },
-  {
-    input: `src/gameLibrary.js`,
-    plugins: [dts()],
-    output: {
-      file: `dist/bundle.d.ts`,
-      format: 'es',
-    },
-  }
-]
+  external: ['react'],
+  plugins: [
+    cleaner({ targets: ['./dist'] }),
+    nodeResolve(),
+    commonjs(),
+    ts({
+      transpiler: 'swc',
+      swcConfig: {
+        jsc: {
+          minify: {
+            compress: true,
+            mangle: true,
+          },
+        },
+        minify: true,
+      },
+    }),
+  ],
+});
+
+export default options;
